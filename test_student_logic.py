@@ -16,7 +16,7 @@ class TestStudentLogic(unittest.TestCase):
         self.assertEqual(predict_performance(40), "Low")
 
     def test_logic_matches_dataset(self):
-        with open("student_performance_classification.csv") as f:
+        with open("student_performance_classification.xls") as f:
             rows = list(csv.DictReader(f))
         self.assertEqual(len(rows), 300)
         for row in rows:
